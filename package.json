@@ -1,0 +1,35 @@
+{
+  "name": "connected-react-router-example-basic",
+  "version": "1.0.0",
+  "description": "A basic example for Connected React Router",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "parcel serve index.html --open"
+  },
+  "author": "Supasate Choochaisri",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {
+    "connected-react-router": "^6.0.0",
+    "history": "^4.7.2",
+    "lodash.set": "^4.3.2",
+    "prop-types": "^15.6.2",
+    "query-string": "^6.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0"
+  }
+}
