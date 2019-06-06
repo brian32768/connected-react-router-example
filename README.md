@@ -2,12 +2,12 @@
 
 ## Install
 ```bash
-yarn
+npm install
 ```
 
 ## Run
 ```bash
-npm run dev
+npm start
 ```
 
 You can try changing counter value and editing some components. Components will be updated while preserving counter state.
