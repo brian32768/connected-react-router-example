@@ -1,5 +1,9 @@
 # Connected React Router Example
 
+Based on the connected-react-router 'basic' example, 
+rewritten for parcel instead of webpack, and with the addition
+of persistance in local storage.
+
 ## Install
 ```bash
 npm install
