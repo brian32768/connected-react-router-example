@@ -1,30 +1,29 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import LatLonForm from './latlonform'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 
-const Map = ({lat, lon}) => {
-    console.log("Map", lat, lon)
-    return (lat && lon)? (
+const mapPicture = require('/assets/one-eyed.jpg')
+
+const Map = ({ center }) => {
+    let lon = 0
+    let lat = 0
+    try {
+        lon = center[0]
+        lat = center[1]
+    } catch(err) {
+        console.log('render err=', err, ' center=', center)
+    }
+    return (
         <>
-            A map centered at (
-            { lat },
-            { lon }) goes here.
-        </>
-    ) :
-    (
-        <>
-        A generic map goes here
+            <LatLonForm />
+            A map centered at ({lat}, {lon}) goes here.
+            <img src={ mapPicture } />
         </>
     )
 }
 
-Map.propTypes = {
-  lat: PropTypes.number,
-  lon: PropTypes.number,
-}
+const mapStateToProps = state => ({
+    center: state.map.center,
+})
 
-// These props are pull from Redux state;
-// history props will come from the ConnectedRouter
-
-export default Map
+export default connect(mapStateToProps)(Map)
