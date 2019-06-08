@@ -21,9 +21,6 @@ export default function configureStore(preloadedState) {
     const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
     const persistedReducer = persistReducer(persistConfig, combinedReducer(history));
 
-    // const thing = createRootReducer(history);
-    //console.log("IT's a ", typeof thing, typeof rr);
-
     const store = createStore(
         persistedReducer,
         preloadedState,
